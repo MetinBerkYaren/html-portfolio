@@ -9,15 +9,35 @@
         #b {
             font-size: x-large;
         }
+
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        img {
+            height: 700px;
+        }
+
+        @media screen and (max-width: 500px) {
+
+            img {
+                height: 500px;
+                /* The width is 100%, when the viewport is 800px or smaller */
+            }
+        }
     </style>
 </head>
 
 <body>
 
-    <p>
-        <b id="b"> Test</b>
-    </p>
-    <br>
+
     <img src="Iımages/obama.jpg" alt="">
 
 </body>
