@@ -4,41 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maintance...</title>
+    <title>Maintenance...</title>
     <style>
-        #b {
-            font-size: x-large;
-        }
-
-        html {
+        html,
+        body {
             margin: 0;
             padding: 0;
         }
 
         body {
-            margin: 0;
-            padding: 0;
             background-color: black;
         }
 
-        img {
+        #foto {
             height: 700px;
-        }
-
-        @media screen and (max-width: 500px) {
-
-            img {
-                height: 500px;
-                /* The width is 100%, when the viewport is 800px or smaller */
-            }
         }
     </style>
 </head>
 
 <body>
 
+    <img id="foto" src="Images/paint.jpg" alt="Painting">
 
-    <img src="Images/paint.jpg" alt="">
+    <script>
+        function updateImageSrc() {
+            const foto = document.getElementById('foto');
+            if (window.innerWidth <= 500) {
+                foto.src = 'Images/paint(Phone).jpg';  // Image for smaller screens
+            } else {
+                foto.src = 'Images/paint.jpg';  // Default image
+            }
+        }
+
+
+        updateImageSrc();
+
+
+        window.addEventListener('resize', updateImageSrc);
+    </script>
 
 </body>
 
